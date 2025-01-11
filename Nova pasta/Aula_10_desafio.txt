@@ -1,0 +1,145 @@
+def system():
+    alunos = []
+    notas  = []
+
+    insert = input('deseja inserir as notas')
+    while insert ==  's':
+          nome = input('Digite o nome do aluno')
+          nota = int(input('nota: '))   
+          notas.append(nota)
+          alunos.append(nome) 
+          insert = input('deseja inserir as notas')
+
+          print(f'''Alunos: {alunos}  - Notas  {notas}''')
+          m1 = media(notas)
+          m2 = mediana(notas)
+          print('Media', m1,'mediana',  m2)
+          moda  =  moda(notas )
+          print(moda)
+
+
+        #   d1 = desvio(notas)
+        #   m3 = mod(notas)
+        #   print(d1, m3)
+          
+
+
+
+    else: 
+       pass
+        #  m1 = media(notas)
+        #  m2 = mediana(notas)
+        #  m3 = moda(nota)
+        #  d1 = desvio(notas)
+        #  print(m1, m2, m3,d1)
+         
+          
+
+            # print(f'MEDIA -  {media1}MODA - {moda1}MEDIANA- {mediana1}DESVIO - {desvio1}')                  
+
+
+system()    
+    
+
+
+     
+
+
+
+
+from statistics import mean
+
+
+def media(lista):
+    media  =  mean(lista)
+    return media
+
+
+
+
+#DESAFIO 2
+import statistics
+
+def moda(lista):
+    moda = statistics.mode(lista)
+    print('moda', moda)
+
+def media(lista):
+    media = statistics.mean(lista)
+    print('media', media)
+
+def mediana(lista):
+    mediana = statistics.median(lista)
+    print('mediana', mediana)
+
+def desvio(lista):
+    desvio = statistics.stdev(lista)
+    print('desvio', desvio)
+
+def display1():
+    print('Empresa 1')
+    empresa1 = [1000,6000,1200,8000,1400]
+    moda = statistics.mode(empresa1)
+    print('Moda: ', moda)
+    
+    # moda(empresa1)
+    # media(empresa1)
+    # mediana(empresa1)
+    # desvio(empresa1)
+    # print()
+
+def display2():
+    print('Empresa 2')
+    empresa2 = [5000,4000,3000,2000,7000]
+    media = statistics.mean(empresa2)
+    print('media ', media)
+    
+
+def display3():
+    print('Empresa 3')
+    empresa3 = [1200,1300,8000,3000,15000]
+    mediana = statistics.median(empresa3)
+    print('mediana', mediana)
+   
+
+def display4():
+    print('Empresa 4')
+    empresa4 = [1400,1750,2000,4500,5900]
+    desvio = statistics.stdev(empresa4)
+    print('desvio', desvio)
+
+import statistics
+
+
+def estatistica(empresa):
+    media  =  statistics.mean(empresa)
+    moda = statistics.mode(empresa)
+    mediana = statistics.median(empresa)
+    desvio = statistics.stdev(empresa)
+    print(f'''
+    moda {moda}
+    media{media}
+    mediana{mediana}
+    desvio{desvio}                    
+    ''')
+
+
+empresa1 = [1000,6000,1200,8000,1400]
+empresa2 = [5000,4000,3000,2000,7000]
+empresa3 = [1200,1300,8000,3000,15000]
+empresa4 = [1400,1750,2000,4500,5900]
+
+
+
+def display():
+    print('empresa 1')
+    estatistica(empresa1)
+    print('empresa 2')
+    estatistica(empresa2)
+    print('empresa 3')
+    estatistica(empresa3)
+    print('empresa 4')
+    estatistica(empresa4)
+
+
+display()
