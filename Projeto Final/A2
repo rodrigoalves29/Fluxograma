@@ -1,0 +1,17 @@
+# Estrutura básica tkinter
+
+import tkinter as tk
+root = tk.Tk()
+
+root.geometry('500x500')
+
+texto_tela = tk.Label(root, text = 'teste')
+texto_tela.pack()
+
+btn = tk.Button(root, text = 'teste')
+btn.pack()
+
+entry1 = tk.Entry(root)
+entry1.pack()
+
+root.mainloop()
